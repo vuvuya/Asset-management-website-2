@@ -1,571 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vuvuya Asset Management Solutions | Powered by Bluestone</title>
+    <title>Vuvuya Asset Management Solutions | Powered by Bluestone Africa</title>
 
-<meta name="description" content="Asset Management, Maintenance Management and Work Order Software for Hotels, Hospitals, Property Managers, Schools and Municipalities.">
+    <meta name="description"
+          content="Asset Management and Maintenance Management Software for Hotels, Hospitals, Property Managers, Schools and Municipalities.">
 
-https://fonts.googleapis.com
-https://fonts.gstatic.com
+    https://fonts.googleapis.com
+    https://fonts.gstatic.com
 
-https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap
+    https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-line-height:1.6;
-color:#333;
-background:#fff;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-:root{
---primary:#0a2e5c;
---secondary:#00a651;
---light:#f4f7fa;
---dark:#101828;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-/* Header */
-
-header{
-position:sticky;
-top:0;
-background:#fff;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-z-index:1000;
-}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 0;
-}
-
-.logo{
-font-size:30px;
-font-weight:800;
-color:var(--primary);
-}
-
-.logo span{
-color:var(--secondary);
-}
-
-.powered{
-font-size:14px;
-color:#666;
-}
-
-.powered a{
-color:var(--primary);
-text-decoration:none;
-font-weight:600;
-}
-
-/* Hero */
-
-.hero{
-background:linear-gradient(rgba(10,46,92,.88),rgba(10,46,92,.88)),
-url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
-min-height:85vh;
-display:flex;
-align-items:center;
-color:#fff;
-}
-
-.hero-content{
-max-width:700px;
-}
-
-.hero h1{
-font-size:58px;
-line-height:1.1;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:20px;
-margin-bottom:30px;
-}
-
-.buttons{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
-}
-
-.btn{
-display:inline-block;
-padding:14px 28px;
-border-radius:50px;
-font-weight:600;
-text-decoration:none;
-transition:.3s;
-}
-
-.btn-primary{
-background:var(--secondary);
-color:#fff;
-}
-
-.btn-primary:hover{
-opacity:.9;
-}
-
-.btn-outline{
-border:2px solid white;
-color:white;
-}
-
-.btn-outline:hover{
-background:white;
-color:var(--primary);
-}
-
-/* Sections */
-
-.section{
-padding:80px 0;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:50px;
-}
-
-.section-title h2{
-font-size:42px;
-color:var(--primary);
-margin-bottom:10px;
-}
-
-/* Cards */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:24px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:16px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
-.card h3{
-color:var(--primary);
-margin-bottom:15px;
-}
-
-/* Industries */
-
-.industries{
-background:var(--light);
-}
-
-/* About */
-
-.about-box{
-background:var(--primary);
-padding:50px;
-border-radius:20px;
-color:white;
-}
-
-.about-box ul{
-margin-top:20px;
-padding-left:20px;
-}
-
-.about-box li{
-margin-bottom:10px;
-}
-
-/* Demo Form */
-
-form{
-max-width:700px;
-margin:auto;
-}
-
-form input,
-form textarea{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:10px;
-font-family:inherit;
-}
-
-form button{
-border:none;
-cursor:pointer;
-}
-
-/* CTA */
-
-.cta{
-background:linear-gradient(135deg,#00a651,#008744);
-color:white;
-text-align:center;
-}
-
-.cta h2{
-font-size:42px;
-margin-bottom:15px;
-}
-
-/* Footer */
-
-footer{
-background:#0f172a;
-color:white;
-padding:50px 0;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-footer a{
-color:white;
-text-decoration:none;
-}
-
-/* WhatsApp */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-width:65px;
-height:65px;
-border-radius:50%;
-background:#25D366;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:28px;
-text-decoration:none;
-box-shadow:0 5px 20px rgba(0,0,0,.3);
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:38px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.section-title h2{
-font-size:30px;
-}
-
-.navbar{
-flex-direction:column;
-gap:10px;
-}
-
-}
-
-</style>
+    css/style.css
 </head>
 
 <body>
 
 <header>
 
-<div class="container navbar">
+    <div class="container navbar">
 
-<div class="logo">
-<span>V</span>UVUYA
-</div>
+        <div>
+            <div class="logo">
+                VUVUYA
+            </div>
 
-<div class="powered">
-Powered by
-<a href="https://bluestonenetwork.co.za" target="_blank">
-Bluestone
-</a>
-</div>
+            <div class="sub-brand">
+                Asset Management Solutions
+            </div>
+        </div>
 
-</div>
+        <nav>
+            #featuresFeatures</a>
+            #industriesIndustries</a>
+            #contactContact</a>
+        </nav>
+
+    </div>
 
 </header>
 
 <section class="hero">
 
-<div class="container">
+    <div class="container">
 
-<div class="hero-content">
+        <div class="hero-content">
 
-<h1>
-Smarter Maintenance.<br>
-Stronger Operations.
-</h1>
+            <h1>
+                Smarter Maintenance.<br>
+                Stronger Operations.
+            </h1>
 
-<p>
-Manage assets, preventive maintenance, work orders and equipment performance from one powerful platform.
-</p>
+            <p>
+                Manage assets, preventive maintenance,
+                work orders, equipment performance and compliance
+                from one powerful platform.
+            </p>
 
-<div class="buttons">
+            <p class="powered-text">
+                Powered by Bluestone Africa • A Member of the Bluestone Network
+            </p>
 
-https://wa.me/26771234567?text=Hello%20Vuvuya.%20I%20would%20like%20to%20book%20a%20demo.
-Book a Demo
-</a>
+            <div class="hero-buttons">
 
-#features
-Learn More
-</a>
+                https://wa.me/27696540717?text=Hello%20Vuvuya.%20I%20would%20like%20to%20book%20a%20demo.
+                    Book a Demo
+                </a>
 
-</div>
+                #features
+                    Learn More
+                </a>
 
-</div>
+            </div>
 
-</div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div>
+            <h2 class="counter" data-target="5000">0</h2>
+            <p>Assets Managed</p>
+        </div>
+
+        <div>
+            <h2 class="counter" data-target="1500">0</h2>
+            <p>Work Orders Processed</p>
+        </div>
+
+        <div>
+            <h2 class="counter" data-target="98">0</h2>
+            <p>Asset Uptime %</p>
+        </div>
+
+    </div>
 
 </section>
 
 <section id="features" class="section">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
-<h2>Core Features</h2>
-<p>Everything you need to manage assets and maintenance.</p>
-</div>
+        <h2 class="section-title">
+            Core Features
+        </h2>
 
-<div class="grid">
+        <div class="feature-grid">
 
-<div class="card">
-<h3>Asset Management</h3>
-<p>Track generators, HVAC, pumps, vehicles, buildings and critical equipment.</p>
-</div>
+            <div class="card">
+                <h3>Asset Tracking</h3>
+                <p>
+                    Track generators, HVAC systems, pumps,
+                    vehicles and critical assets.
+                </p>
+            </div>
 
-<div class="card">
-<h3>Preventive Maintenance</h3>
-<p>Reduce downtime through planned maintenance schedules.</p>
-</div>
+            <div class="card">
+                <h3>Preventive Maintenance</h3>
+                <p>
+                    Reduce breakdowns through scheduled maintenance.
+                </p>
+            </div>
 
-<div class="card">
-<h3>Work Orders</h3>
-<p>Create, assign and track maintenance tasks in real time.</p>
-</div>
+            <div class="card">
+                <h3>Work Orders</h3>
+                <p>
+                    Assign, monitor and complete maintenance tasks.
+                </p>
+            </div>
 
-<div class="card">
-<h3>QR Code Tracking</h3>
-<p>Instantly access maintenance history from your mobile device.</p>
-</div>
+            <div class="card">
+                <h3>QR Code Scanning</h3>
+                <p>
+                    Access equipment history instantly from mobile devices.
+                </p>
+            </div>
 
-<div class="card">
-<h3>Maintenance Reporting</h3>
-<p>Powerful insights and reports for informed decisions.</p>
-</div>
+            <div class="card">
+                <h3>Reporting & Analytics</h3>
+                <p>
+                    Gain actionable insights into asset performance.
+                </p>
+            </div>
 
-<div class="card">
-<h3>Mobile Access</h3>
-<p>Manage technicians and assets from anywhere.</p>
-</div>
+            <div class="card">
+                <h3>Mobile Access</h3>
+                <p>
+                    Manage maintenance teams from anywhere.
+                </p>
+            </div>
 
-</div>
+        </div>
 
-</div>
-
-</section>
-
-<section class="section industries">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Industries We Serve</h2>
-</div>
-
-<div class="grid">
-
-<div class="card">
-<h3>Hotels & Lodges</h3>
-</div>
-
-<div class="card">
-<h3>Hospitals</h3>
-</div>
-
-<div class="card">
-<h3>Property Management</h3>
-</div>
-
-<div class="card">
-<h3>Schools & Universities</h3>
-</div>
-
-<div class="card">
-<h3>Municipalities</h3>
-</div>
-
-<div class="card">
-<h3>Commercial Facilities</h3>
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<section class="section">
+<section id="industries" class="industries">
 
-<div class="container">
+    <div class="container">
 
-<div class="about-box">
+        <h2 class="section-title">
+            Industries We Serve
+        </h2>
 
-<h2>Why Choose Vuvuya?</h2>
+        <div class="industry-grid">
 
-<ul>
-<li>Centralised Asset Register</li>
-<li>Preventive Maintenance Scheduling</li>
-<li>Maintenance Work Orders</li>
-<li>QR Code Asset Tracking</li>
-<li>Contractor Performance Monitoring</li>
-<li>Real-Time Reporting</li>
-<li>Powered by Bluestone Technology</li>
-</ul>
+            <div class="industry">
+                Hotels & Lodges
+            </div>
 
-</div>
+            <div class="industry">
+                Hospitals & Healthcare
+            </div>
 
-</div>
+            <div class="industry">
+                Property Management
+            </div>
 
-</section>
+            <div class="industry">
+                Schools & Universities
+            </div>
 
-<section class="section">
+            <div class="industry">
+                Municipalities
+            </div>
 
-<div class="container">
+            <div class="industry">
+                Commercial Facilities
+            </div>
 
-<div class="section-title">
-<h2>Request a Demo</h2>
-<p>Let's discuss your maintenance and asset management requirements.</p>
-</div>
+        </div>
 
-<form>
-
-<input type="text" placeholder="Company Name" required>
-
-<input type="text" placeholder="Contact Person" required>
-
-<input type="email" placeholder="Email Address" required>
-
-<input type="tel" placeholder="Phone Number" required>
-
-<textarea rows="5" placeholder="Tell us about your organisation"></textarea>
-
-<button class="btn btn-primary" type="submit">
-Request Demo
-</button>
-
-</form>
-
-</div>
+    </div>
 
 </section>
 
-<section class="section cta">
+<section class="about-section">
 
-<div class="container">
+    <div class="container">
 
-<h2>Ready To Reduce Downtime?</h2>
+        <h2 class="section-title">
+            About Vuvuya
+        </h2>
 
-<p>
-Book a free consultation with our asset management specialists.
-</p>
+        <p class="about-text">
+            Vuvuya Asset Management Solutions is an enterprise
+            asset and maintenance management platform designed to help
+            organisations reduce downtime, improve reliability and
+            streamline maintenance operations.
+        </p>
 
-<br>
+        <p class="about-text">
+            Powered by Bluestone Africa and part of the Bluestone Network,
+            Vuvuya provides modern solutions for hotels, healthcare facilities,
+            property managers, schools, universities and municipalities.
+        </p>
 
-https://wa.me/26771234567?text=Hello%20Vuvuya.%20I%20would%20like%20to%20book%20a%20demo.
-Chat on WhatsApp
-</a>
+    </div>
 
-</div>
+</section>
+
+<section id="contact" class="contact-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Request a Free Demo
+        </h2>
+
+        https://formsubmit.co/vuvuyaenterprises@gmail.com
+
+            <input type="hidden"
+                   name="_subject"
+                   value="Vuvuya Demo Request">
+
+            <input type="hidden"
+                   name="_captcha"
+                   value="false">
+
+            <input type="text"
+                   name="company"
+                   placeholder="Company Name"
+                   required>
+
+            <input type="text"
+                   name="contact_person"
+                   placeholder="Contact Person"
+                   required>
+
+            <input type="email"
+                   name="email"
+                   placeholder="Email Address"
+                   required>
+
+            <input type="tel"
+                   name="phone"
+                   placeholder="Phone Number"
+                   required>
+
+            <textarea name="requirements"
+                      rows="6"
+                      placeholder="Tell us about your asset management requirements"></textarea>
+
+            <button type="submit"
+                    class="btn btn-primary">
+                Request Demo
+            </button>
+
+        </form>
+
+    </div>
 
 </section>
 
 <footer>
 
-<div class="container">
+    <div class="container">
 
-<div class="footer-grid">
+        <h3>Vuvuya Asset Management Solutions</h3>
 
-<div>
-<h3>Vuvuya Asset Management Solutions</h3>
-<p>Assets Today. A More Reliable Tomorrow.</p>
-</div>
+        <p>
+            Smarter Maintenance. Stronger Operations.
+        </p>
 
-<div>
-<h3>Powered By Bluestone</h3>
-<p>
-<a href="https://bluestonenetwork.co.za" target="_blank">
-bluestonenetwork.co.za
-</a>
-</p>
-</div>
+        <br>
 
-<div>
-<h3>Contact</h3>
-<p>WhatsApp: +267 71 234 567</p>
-<p>Email: info@vuvuya.africa</p>
-</div>
+        <p>📱 +27 69 654 0717</p>
 
-</div>
+        <p>✉ info@vuvuya.africa</p>
 
-<br>
+        <br>
 
-<hr>
+        <p>
+            Powered by Bluestone Africa
+        </p>
 
-<br>
+        <p>
+            A Member of the Bluestone Network
+        </p>
 
-<p>
-© 2026 Vuvuya Asset Management Solutions. All Rights Reserved.
-</p>
+        <br>
 
-</div>
+        <p>
+            Bluestone Africa:
+            <a href="https://bluestone.africa" target="_blank">
+                bluestone.africa
+            </a>
+        </p>
+
+        <p>
+            Bluestone Network:
+            <a href="https://bluestonenetwork.co.za" target="_blank">
+                bluestonenetwork.co.za
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 Vuvuya Asset Management Solutions.
+            All Rights Reserved.
+        </p>
+
+    </div>
 
 </footer>
 
-https://wa.me/26771234567?text=Hello%20Vuvuya.%20I%20would%20like%20to%20book%20a%20demo.
-💬
+https://wa.me/27696540717?text=Hello%20Vuvuya.%20I%20would%20like%20to%20book%20a%20demo.
+    💬
 </a>
+
+js/script.jsscript>
 
 </body>
 </html>
